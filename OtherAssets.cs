@@ -8,10 +8,9 @@ namespace Asset_Tracking_3_Lavinia
 {
     internal class OtherAssets : Assets
     {
-        public OtherAssets(string type, string assetClass, string brand, DateTime purchased, bool isdeprecated)
+        public OtherAssets(string resourcetype, string brand, DateTime purchased, bool isdeprecated)
         {
-            ResourceType = type;
-            AssetClass = assetClass;
+            ResourceType = resourcetype;
             Brand = brand;
             Purchased = purchased;
             IsDeprecated = isdeprecated;
@@ -19,9 +18,8 @@ namespace Asset_Tracking_3_Lavinia
 
         public override string ResourceType { get; set; }
 
-        public string AssetClass { get; set; }
-
-        public string Brand { get; set; }
+        // public string Brand { get; set; }
+        public override string Brand { get => base.Brand; set => base.Brand = value; }
 
         public override DateTime Purchased { get; set; }
 
